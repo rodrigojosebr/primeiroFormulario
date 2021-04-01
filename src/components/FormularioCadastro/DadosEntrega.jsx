@@ -23,6 +23,7 @@ function DadosEntrega({ aoEnviar }) {
         name="cep"
         label="CEP"
         type="number"
+        required
         variant="outlined"
         margin="normal"
       />
@@ -35,6 +36,7 @@ function DadosEntrega({ aoEnviar }) {
         name="endereço"
         label="Enderço"
         type="text"
+        required
         variant="outlined"
         margin="normal"
         fullWidth
@@ -48,6 +50,7 @@ function DadosEntrega({ aoEnviar }) {
         name="numero"
         label="Numero"
         type="number"
+        required
         variant="outlined"
         margin="normal"
       />
@@ -60,6 +63,7 @@ function DadosEntrega({ aoEnviar }) {
         name="estado"
         label="Estado"
         type="text"
+        required
         variant="outlined"
         margin="normal"
       />
@@ -72,6 +76,7 @@ function DadosEntrega({ aoEnviar }) {
         name="cidade"
         label="Cidade"
         type="text"
+        required
         variant="outlined"
         margin="normal"
       />

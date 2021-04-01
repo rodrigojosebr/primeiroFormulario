@@ -18,7 +18,7 @@ function FormularioCadastro({ aoEnviar }) {
     <DadosUsuario aoEnviar={coletarDados} />,
     <DadosPessoais aoEnviar={coletarDados} />,
     <DadosEntrega aoEnviar={coletarDados} />,
-    <Typography variant="h5">Obrigado pelo Cadastro!</Typography>,
+    <Typography variant="h5" align="center">Dados enviados com Sucesso!</Typography>,
   ];
 
   function coletarDados(dados) {
@@ -32,16 +32,16 @@ function FormularioCadastro({ aoEnviar }) {
     <>
       <Stepper activeStep={etapaAtual}>
         <Step>
-          <StepLabel>Login</StepLabel>
+          <StepLabel align="center">Login</StepLabel>
         </Step>
         <Step>
-          <StepLabel>Pessoal</StepLabel>
+          <StepLabel align="center">Dados Pessoais</StepLabel>
         </Step>
         <Step>
-          <StepLabel>Entrega</StepLabel>
+          <StepLabel align="center">Dados de Entrega</StepLabel>
         </Step>
         <Step>
-          <StepLabel>Finalização</StepLabel>
+          <StepLabel align="center">Finalização do Cadastro</StepLabel>
         </Step>
       </Stepper>
       {formularios[etapaAtual]}

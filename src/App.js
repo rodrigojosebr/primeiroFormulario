@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Container component="article" maxWidth="sm">
         <Typography variant="h3" component="h1" align="center">
-          Formulário de cadastro
+          Formulário de Cadastro
         </Typography>
         <ValidacoesCadastro.Provider
           value={{ cpf: validarCPF, senha: validarSenha, nome: validarSenha }}

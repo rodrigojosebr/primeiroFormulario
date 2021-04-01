@@ -7,8 +7,9 @@ function DadosPessoais({ aoEnviar }) {
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCpf] = useState("");
+  const [telefone, setTelefone] = useState("");
   const [promocoes, setPromocoes] = useState(true);
-  const [novidades, setNovidades] = useState(false);
+  const [novidades, setNovidades] = useState(true);
   const validacoes = useContext(ValidacoesCadastro)
   const [erros, validarCampos, possoEnviar] = useErros(validacoes);
 
@@ -34,6 +35,7 @@ function DadosPessoais({ aoEnviar }) {
         id="nome"
         label="Nome"
         name="nome"
+        required
         variant="outlined"
         margin="normal"
         fullWidth
@@ -46,6 +48,7 @@ function DadosPessoais({ aoEnviar }) {
         id="sobrenome"
         name="sobrenome"
         label="Sobrenome"
+        required
         variant="outlined"
         margin="normal"
         fullWidth
@@ -61,6 +64,19 @@ function DadosPessoais({ aoEnviar }) {
         id="CPF"
         name="cpf"
         label="CPF"
+        required
+        variant="outlined"
+        margin="normal"
+        fullWidth
+      />
+      <TextField
+        value={telefone}
+        onChange={(event) => {
+          setTelefone(event.target.value);
+        }}
+        id="telefone"
+        name="telefone"
+        label="Telefone"
         variant="outlined"
         margin="normal"
         fullWidth
@@ -94,7 +110,7 @@ function DadosPessoais({ aoEnviar }) {
         }
       />
 
-      <Button type="submit" variant="contained" color="primary">
+      <Button type="submit" variant="contained" color="primary" >
         Próximo
       </Button>
     </form>
